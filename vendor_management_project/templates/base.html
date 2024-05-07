@@ -1,0 +1,55 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Project Title</title>
+    <!-- Add any CSS or Bootstrap CDN links here -->
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Vendor Management</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+           <li class="nav-item">
+          <a class="nav-link" href="{% url 'vendor-list' %}">Vendors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'vendor-create' %}">Create Vendor</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'vendor-detail' pk=1 %}">Vendor Details</a>
+        </li>
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'vendor-performance' pk=1 %}">Vendor Performance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'purchase-order-list' %}">Purchase Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'purchase-order-create' %}">Create Purchase Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'purchase-order-acknowledge' pk=1 %}">Acknowledge Purchase Order</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'purchase-order-detail' pk=1 %}">Purchase Order Details</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Add any JavaScript or Bootstrap CDN links here -->
+
+</body>
+</html>
